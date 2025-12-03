@@ -4,7 +4,7 @@ import os
 
 print("Veritabanı şu konuma kaydedilecek:", os.getcwd())
 
-# 1. VERİTABANI BAĞLANTISI
+
 baglanti = sqlite3.connect("filmlerim.db")
 cursor = baglanti.cursor()
 
@@ -72,4 +72,5 @@ while True:
         break
     else:
         print("Geçersiz seçim! Lütfen 1-4 arası bir sayı girin.")
+
 
