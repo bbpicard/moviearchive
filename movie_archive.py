@@ -1,14 +1,14 @@
 import sqlite3
 import os
 
-# Veritabanı dosyasının nerede oluştuğunu görmek için yolu yazdırıyoruz
+
 print("Veritabanı şu konuma kaydedilecek:", os.getcwd())
 
 # 1. VERİTABANI BAĞLANTISI
 baglanti = sqlite3.connect("filmlerim.db")
 cursor = baglanti.cursor()
 
-# Tablo oluşturma
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS filmler (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -55,7 +55,7 @@ def film_sil():
     baglanti.commit()
     print("\n🗑️ Film başarıyla silindi.")
 
-# ANA DÖNGÜ
+
 while True:
     menu_goster()
     secim = input("Seçiminiz (1-4): ")
@@ -72,3 +72,4 @@ while True:
         break
     else:
         print("Geçersiz seçim! Lütfen 1-4 arası bir sayı girin.")
+
